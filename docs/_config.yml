@@ -22,7 +22,7 @@ title: Portfolio
 email: connectwith.shrey@pertinacia.dev
 description: >- # this means to ignore newlines until "baseurl:"
   Jekyll portfolio for Shreyas M hosted on GitHub Pages
-baseurl: "/docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
