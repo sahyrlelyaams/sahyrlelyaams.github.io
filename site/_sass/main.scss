@@ -1,0 +1,48 @@
+@media (prefers-color-scheme: light) {
+    :root {
+      --text: #050523;
+      --background: #ddddfd;
+      --primary: #000080;
+      --secondary: #a4a4f9;
+      --accent: #0e0ec4;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --text: #dbdbfa;
+      --background: #020222;
+      --primary: #8080ff;
+      --secondary: #06065b;
+      --accent: #3b3bf1;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vw !important;
+    width: 100vw !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: start;
+    padding: 0.75rem 1rem;
+    column-gap: 1.25rem;
+    box-shadow: 0 0 16px 0 var(--secondary);
+
+    a {
+        flex: 0 1 auto;
+        text-decoration: none;
+        color: var(--primary);
+        &:visited {
+            color: var(--secondary);
+        }
+    }
+
+    .max-col {
+        flex: 1 0 auto;
+    }
+}

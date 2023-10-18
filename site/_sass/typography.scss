@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Khula:400');
+$font-sizes: ("default": 1rem, "1": 0.8rem, "2": 1.25rem, "3": 1.563rem, "4": 1.954px, "5": 2.442rem, "6": 3.053rem);
+$font-text: ("Khula": "400");
+$font-display: ("Comfortaa": "700");
+
+@each $index, $size in $font-sizes {
+    .font-size-#{$index}{
+        font-size: $size !important;
+    };
+}
+
+@each $screen-size, $screen-width in ('sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1220px, 'xxl': 1440px) {
+    @media (min-width: $screen-width) {
+        @each $index, $size in $font-sizes {
+            .font-size-#{$screen-size}-#{$index}{
+                font-size: $size !important;
+            };
+        }
+    }
+}
+
+@each $text-family, $text-weight in $font-text {
+    .font-text {
+        font-family: $text-family !important;
+        font-weight: $text-weight !important;
+    }
+}
+
+@each $dis-family, $dis-weight in $font-display {
+    .font-display {
+        font-family: $dis-family !important;
+        font-weight: $dis-weight !important;
+    }
+}
+
+body {
+  font-family: 'Khula', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Comfortaa';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3.053rem; /* 48.8px */}
+
+h2 {font-size: 2.442rem; /* 39.04px */}
+
+h3 {font-size: 1.954rem; /* 31.2px */}
+
+h4 {font-size: 1.563rem; /* 24.96px */}
+
+h5 {font-size: 1.250rem; /* 20px */}
+
+small {font-size: 0.800rem; /* 12.8px */}
